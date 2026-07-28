@@ -4,8 +4,11 @@
 
 Faça os exercícios a seguir escrevendo código JavaScript a ser vinculado à sua página HTML com a tag `<script>`.
 
--   Utilize a função `prompt()` para capturar dados do usuário
--   Não se preocupe em tratar casos em que o usuário irá inserir valores inválidos neste momento
+- Utilize a função `prompt()` para capturar dados do usuário
+- Utilize as funções `prompt()` ou `confirm()` para capturar entradas do usuário
+- Utilize as funções `alert()` ou `console.log()` para exibir saídas ao usuário
+- Faça a verificação se o tipo de dado adequado foi inserido
+- Utilize a conversão de tipos, implícita ou explícita, conforme necessidade, em cada exercício
 
 ### Essenciais
 
@@ -42,3 +45,29 @@ Os exercícios a seguir devem ser realizados utilizando `do...while`:
 7. Defina uma variável com uma "senha". Faça um laço de repetição que solicite a senha até que o usuário insira a senha correta. Exiba quantas tentativas incorretas o usuário realizou;
 8. Escreva um algoritmo que leia 10 números e identifique quantos deles são pares (sabendo que o número par é aquele divisível por 2). Utilize o operador `%` módulo para verificar o resto da divisão.
 9. Escreva um programa que solicite ao utilizador a quantidade de números desejada (_n_) e, utilizando um laço de repetição, imprima os _n_ primeiros números da sequência de Fibonacci, onde cada número é a soma dos dois anteriores (começando por 0 e 1). Exemplo de sequência: `0, 1, 1, 2, 3, 5, 8, 13, 21, 34...`
+
+## Desenhos
+
+1. Desenhe o triângulo utilizando um laço de repetição:
+
+#
+# #
+# # #
+# # # #
+# # # # #
+
+2. Utilizando laços de repetição, exiba um calendário no console:
+
+ S  T  Q  Q. S  S  D
+    1  2  3  4  5  6 
+ 7  8  9 10 11 12 13 
+14 15 16 17 18 19 20 
+21 22 23 24 25 26 27 
+28 29 30 31
+
+Pode ser útil definir algumas constantes no seu código, como:
+
+```js
+const DIAS_DO_MES    = 31
+const DIAS_DA_SEMANA = 7
+```
