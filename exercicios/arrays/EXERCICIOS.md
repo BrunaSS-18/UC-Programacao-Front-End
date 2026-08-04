@@ -22,8 +22,8 @@ Faça os exercícios a seguir escrevendo código JavaScript a ser vinculado à s
 4. **Lista de compras**: crie uma função `gerarTextoCompras(itens)` que receba um array de strings contendo produtos de supermercado. A função deve retornar uma única string com todos os itens separados por vírgula e espaço. Exiba a lista no console.
 5. **Lista de compras 2**: adicione um parâmetro `formato` à função `gerarTextoCompras(itens, formato)`, que espera receber `texto` ou `lista`. Caso seja passado `texto`, retorne os itens separados por vírgula e espaço. Caso seja passado `lista`, retorne os elementos prefixados com um marcador • e separados por uma quebra de linha. Exemplo:
 
-```txt
-• Arroz
-• Feijão
-• Macarrão
-```
+	```txt
+	• Arroz
+	• Feijão
+	• Macarrão
+	```
