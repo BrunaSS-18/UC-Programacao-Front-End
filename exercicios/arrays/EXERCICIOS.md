@@ -28,4 +28,4 @@ Faça os exercícios a seguir escrevendo código JavaScript a ser vinculado à s
 	• Macarrão
 	```
 6. **Pódio**: declare um array com a classificação final de uma corrida com 6 corredores: `["Ana", "Beto", "Caio", "Duda", "Eva", "Fred"]`. Extraia o pódio (os três primeiros colocados), considerando que eles já estão ordenados. Exiba o pódio da corrida. Obs: utilize o método `slice()`.
-7. **Usuários banidos**: crie um array com uma lista de usuários banidos, que armazene seus apelidos, ex: `["WiseScorpion", "Plabbernom", "xxx33Fibberflop"]`. Crie uma função que receba dois parâmetros, o array de banidos e um apelido. Verifique se o apelido está no array, ou seja, está banido, e retorne este status. Exiba este retorno no console.
+7. **Usuários banidos**: crie um array com uma lista de usuários banidos, que armazene seus apelidos, ex: `["WiseScorpion", "Plabbernom", "xxx33Fibberflop"]`. Crie uma função que receba dois parâmetros, o array de banidos e um apelido. Verifique se o apelido está no array, ou seja, está banido, e retorne este status. Exiba este retorno no console. **Obs:** utilize o método `includes()`.
