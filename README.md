@@ -8,12 +8,12 @@ Este repositório é destinado a armazenar exemplos programados em sala, exercí
 
 ## Estrutura de pastas
 ```
-	📁 aluno/         -> Pasta destinada aos estudantes para colocarem seus exercícios. Este diretório NÃO será atualizado no repositório original alunos devem commitar suas soluções em seus próprios forks/clones.
-	📁 aulas/         -> Pastas com exemplos de sala de aula.
-	📁 conteudo/      -> Material e notas da disciplina.
-	📁 exercicios/    -> Exercícios por tema.
-	📄 LICENSE        -> Licença do repositório.
-	📄 README.md      -> Documento principal com instruções e links.
+	📁 aluno/         /* Pasta destinada aos estudantes para colocarem seus exercícios. Este diretório NÃO será atualizado no repositório original alunos devem commitar suas soluções em seus próprios forks/clones. */
+	📁 aulas/         /* Pastas com exemplos de sala de aula. */
+	📁 conteudo/      /* Material e notas da disciplina. */
+	📁 exercicios/    /* Exercícios por tema. */
+	📄 LICENSE        /* Licença do repositório. */
+	📄 README.md      /* Documento principal com instruções e links. */
 ```
 
 ## Criando fork (bifurcação) 🔀
