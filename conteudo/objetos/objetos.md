@@ -147,10 +147,93 @@ Muitas vezes iremos lidar com objetos que foram previamente definidos, ou que em
 
 #### hasOwn
 
+O método `Object.hasOwn()` retorna `true` se o objeto específicado tem a propriedade indicada como sua própria propriedade. Se a propriedade é herdada, ou não existe, o método retorna `false`.
+
+```js
+const carro = {
+  cor: "vermelho",
+};
+
+console.log(Object.hasOwn(carro, "cor")); // true
+
+console.log(Object.hasOwn(carro, "toString")); // false - ele tem a propriedade toString, mas ela foi herdada do protótipo Object
+
+console.log(Object.hasOwn(carro, "modelo")); // false
+```
+
 #### operador in
+
+O operador `in` retorna `true` se a propriedade especificada estiver no objeto especificado **ou** na sua cadeia de protótipo (prototype chain) desde Object.
+
+```js
+const carro = {
+  cor: "vermelho",
+};
+
+"cor" in carro; // true
+"toString" in carro; // true
+"modelo" in carro; // false
+```
 
 ## Métodos
 
+Todos os objetos JavaScript (exceto aqueles criados explicitamente sem um protótipo) herdam propriedades de `Object.prototype`. Essas propriedades herdadas são, principalmente, métodos e, por estarem universalmente disponíveis, são de particular interesse para os programadores de JavaScript.
+
+Mas também podemos definir nossos próprios métodos, definindo funções em nossos objetos.
+
+### Declaração de método em objeto literal
+
+Para declararmos métodos em objetos literais, podemos utilizar o a sintaxe abreviada, declarando um método com seu nome, lista de parâmetros e corpo, dentro das `{}` que delimitam o objeto:
+
+```js
+const samurai = {
+	nome: "Musashi",
+	oficio: "espadachim",
+	estilo: "Niten Ichi-Ryu",
+  
+	apresentar() {
+    return 'Olá, meu nome é Musashi, sou espadachim';
+  }
+};
+
+console.log(samurai.apresentar());
+```
+
+Mas perceba que, nosso método não está utilizando as propriedades do objeto para construir a mensagem retornada. E se o valor de nome e oficio mudarem? Precisaremos alterar também no método. Mas e se quisermos que o método acesse de fato as demais propriedades do objeto ao qual ela faz parte? Podemos fazer isso com a palavra reservada `this`. 
+
+### this
+
+A palavra reservada `this` tem seu valor definido a partir do contexto em que ela é utilizada e em que uma função ou método é invocado. Vamos adaptar o exemplo anterior para, usando `this`, acessar as propriedades do objeto.
+
+```js
+const samurai = {
+	nome: "Musashi",
+	oficio: "espadachim",
+	estilo: "Niten Ichi-Ryu",
+  
+	apresentar() {
+    return 'Olá, meu nome é ${this.nome}, sou ${this.oficio}';
+  }
+};
+
+console.log(samurai.apresentar());
+```
+
+Quando o método `apresentar()` é invocado, o valor de `this` estará referenciando o próprio objeto, sendo assim possível acessar as propriedades dele de dentro do método. Esse é um recurso bastante poderoso que nos permite criar objetos ainda mais complexos.
+
+**Obs:** no contexto de execução global (fora de qualquer função), `this` refere-se ao `objeto global`.
+
+### this e escopo
+
+A regra de ouro para entender o `this` no JavaScript se resume a uma diferença simples de conceito:
+
+- Em funções normais (declaradas com function ou métodos tradicionais): O this é dinâmico — depende de como e por quem a função é invocada no momento da execução.
+- Em Arrow Functions (=>): O this é léxico (estático) — ela não possui seu próprio this e apenas herda o valor do escopo externo onde foi definida.
+
+Iremos estudar em mais detalhes o comportamento do this de forma mais aprofundada mais adiante.
+
 # Referências
 
-FLANAGAN, David. **JavaScript: The Definitive Guide**. 7. ed. Sebastopol: O'Reilly Media, 2020. p. 129-153.
+- FLANAGAN, David. **JavaScript: The Definitive Guide**. 7. ed. Sebastopol: O'Reilly Media, 2020. p. 129-153.
+- Mozilla Developer Network. **Object.hasOwn()**. Disponível em: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn. Acessado em: 05 de agosto de 2026.
+- _______________________.  **this**. Disponível em: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/this. Acessado em: 05 de agosto de 2026.
