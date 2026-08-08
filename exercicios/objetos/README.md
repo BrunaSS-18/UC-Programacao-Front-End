@@ -14,3 +14,11 @@ Faça os exercícios a seguir escrevendo código JavaScript a ser vinculado à s
 3. Escreva um programa que declara um objeto carro, com as propriedades `nome (string)`, `cor (string)`, `modelo (string)` e `opcionais (object)`, contendo `ar condicionado (boolean)`, `direção helétrica (boolean)` e `multimídia (boolean)`.
 	- Escreva uma função que recebe o carro como parâmetro e exibe seus detalhes
 	- Escreva uma função que recebe o carro (`object`), o nome de um opcional (`string`) e um booleano como parâmetro para adicionar/remover um opcional do carro
+
+4. Modifique o código abaixo para que ele exiba os funcionários em ordem alfabética, sem alterar o objeto original.
+
+```js
+const funcionarios = {
+
+}
+```
