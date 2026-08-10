@@ -15,10 +15,52 @@ Faça os exercícios a seguir escrevendo código JavaScript a ser vinculado à s
 	- Escreva uma função que recebe o carro como parâmetro e exibe seus detalhes
 	- Escreva uma função que recebe o carro (`object`), o nome de um opcional (`string`) e um booleano como parâmetro para adicionar/remover um opcional do carro
 
-4. Modifique o código abaixo para que ele exiba os funcionários em ordem alfabética, sem alterar o objeto original.
+4. Em um sistema legado de e-commerce estão sendo retornados por `endpoints` distintos os dados de vendas (`preço`, `categoria`, `marca`) e os dados de estoque (`estoque`, `peso`). Escreva um programa que consolide os dados dos produtos em um objeto por produto.
 
 ```js
-const funcionarios = {
+const produtos_vendas = {
+	cafes: [
+		{
+			sku: 7654,
+			marca: "Povo Brasileiro",
+			preco: 24.00,
+			categoria: "Mercearia"
+		},
+		{
+			sku: 8765,
+			marca: "Soberano - Gourmet",
+			preco: 29.00,
+			categoria: "Mercearia",
+		},
+		{
+			sku: 3467,
+			marca: "Dose Certa",
+			preco: 27.00,
+			categoria: "Mercearia"
+		}
+	]	
+}
 
+const produtos_estoque = {
+	cafes: [
+		{
+			sku: 3467,
+			peso: 500.00,
+			unidade: "mg",
+			estoque: 101
+		},
+		{
+			sku: 7654,
+			peso: 250.00,
+			unidade: "mg",
+			estoque: 182
+		},
+		{
+			sku: 8765,
+			peso: 250.00,
+			unidade: "mg",
+			estoque: 46
+		}
+	]
 }
 ```
