@@ -64,3 +64,19 @@ const produtos_estoque = {
 	]
 }
 ```
+
+5. Dado um objeto `carrinho`, que representa um carrinho de compras em um sistema, adicione os métodos:
+	- `adicionarProduto()`: que aceite três parâmetros, `nome`, `preco`e `quantidade`. Adicione o produto no array da propriedade `itens`, caso ele não esteja no carrinho ainda, do contrário, aumente a quantidade, caso ele já esteja.
+	- `calcularTotal()`: calcule o preço total da compra, percorrendo os produtos na propriedade itens, e armazene em uma nova propriedade do carrinho.
+	- `aplicarDesconto()`: que aceita um parâmetro, `cupom`. Verifique se o cupom passado é um dos cupons válidos na propriedade `cupons`, armazene o cupom utilizado em uma nova propriedade do objeto e modifique o preço total da compra para ter 10% de desconto.
+	- `exibirCupom()`: Exiba em detalhes um cupom no console, com dados do cliente, lista de produtos, quantidades e preço, preço total e se houve cupom aplicado ou não.
+
+```js
+const carrinho = {
+	cliente: "Alice",
+	itens: [
+	{ nome: "Smartphone", preco: 2200, quantidade: 1 },
+	],
+	cupons: ["MENOS10", "PROMO10", "10PORCENTO"]
+}
+```
