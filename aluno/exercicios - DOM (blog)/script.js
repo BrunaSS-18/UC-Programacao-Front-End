@@ -37,3 +37,7 @@ function addEmoji(emoji){
     })
 }
 
+corFundo("black");
+fonteTitulo("arial");
+removerSecao();
+addEmoji("😎");
