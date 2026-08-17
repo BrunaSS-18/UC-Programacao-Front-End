@@ -35,3 +35,8 @@ Filtro a exibição de países para exibir apenas os países cujo a moeda seja o
 ## 6. Remoção de países
 
 Crie uma função que recebe como parâmetro o nome (ou sigla) de um ou mais países. A função deve remover os países passado da exibição na página. Invoque a função do console para testar o seu funcionamento.
+
+## 7. Estilização
+
+Estile a página para exibir os cartões de países formatados (cor de fundo, fontes, posicionamento, margens, padding, etc.).
+Estilize o cartão de cada país com uma cor diferente por continente.
