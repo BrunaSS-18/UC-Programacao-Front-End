@@ -12402,9 +12402,39 @@ const countries = [
 	}
 ];
 
-let secao = document.querySelector(".countries");
+//exercicio 3
+
+ let continentes = [
+ 	"América",
+ 	"África"
+]
+
+ let secao = document.querySelector(".countries");
  
-const paises = countries.map(pais => {
+// const paises = countries.filter(pais => continentes.includes(pais.localizacao.regiao.nome)).map(pais => {
+//     const sigla = pais.id["ISO-3166-1-ALPHA-2"].toLowerCase();
+ 
+//     return `
+//         <div class="fundo">
+//             <img src="https://flagcdn.com/w80/${sigla}.png" alt="Bandeira de ${pais.nome.abreviado}">
+ 
+//             <h3>${pais.nome.abreviado}</h3>
+//             <p>Sigla: ${sigla.toUpperCase()}</p>
+//             <p>Região: ${pais.localizacao.regiao.nome}</p>
+//             <p>Capital: ${pais.governo.capital.nome}</p>
+//         </div>
+//     `;
+// }).join("");
+ 
+//secao.innerHTML = paises;
+
+
+//exercicio 6 
+let dolar = ["Dólar dos Estados Unidos"]
+
+const paises = countries
+	.filter(pais => pais['unidades-monetarias']?.some(moeda => dolar.includes(moeda.nome)))
+	.map(pais => {
     const sigla = pais.id["ISO-3166-1-ALPHA-2"].toLowerCase();
  
     return `
@@ -12415,8 +12445,9 @@ const paises = countries.map(pais => {
             <p>Sigla: ${sigla.toUpperCase()}</p>
             <p>Região: ${pais.localizacao.regiao.nome}</p>
             <p>Capital: ${pais.governo.capital.nome}</p>
+			<p>Moeda: ${pais["unidades-monetarias"][0].nome}</p>
         </div>
     `;
 }).join("");
- 
+
 secao.innerHTML = paises;
