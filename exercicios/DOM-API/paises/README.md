@@ -26,8 +26,7 @@ Além disso, utilize a FlagCDN para exibir a bandeira dos países: [https://flag
 
 ## 4. Filtro de continentes
 
-Adicione um array no topo do seu script com os valores `["América", "África"]`. Exiba apenas os países destes continentes.
-Conseguindo, altere os continentes na lista para validar que está funcionando adequadamente.
+Adicione um array no topo do seu script com os valores `["América", "África"]`. Exiba apenas os países destes continentes. Conseguindo, altere os continentes na lista para validar que está funcionando adequadamente.
 
 ## 5. Filtro de moeda
 
